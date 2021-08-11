@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DataProcessor": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\tehbl\\Documents\\Pluralsight\\WorkingWithFilesAndStreamsInC#\\DataProcessor\\psdata\\in"
+    }
+  }
+}
