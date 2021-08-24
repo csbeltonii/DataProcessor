@@ -52,6 +52,8 @@ namespace DataProcessor
             {
                 WriteLine($"Watching directory {directoryToWatch} for changes");
 
+                ProcessExistingFiles(directoryToWatch);
+
                 using var inputFileWatch = new FileSystemWatcher(directoryToWatch);
 
                 inputFileWatch.IncludeSubdirectories = false;
@@ -153,7 +155,7 @@ namespace DataProcessor
             var policy = new CacheItemPolicy
             {
                 RemovedCallback = ProcessFile,
-                SlidingExpiration = TimeSpan.FromSeconds(2)
+                SlidingExpiration = TimeSpan.FromSeconds(2) // must specify a value higher than one second
             };
 
             FilesToProcess.Add(item, policy);
@@ -170,7 +172,18 @@ namespace DataProcessor
             }
             else
             {
-                WriteLine($"WARNING: {args.CacheItem.Key} was removed unexpectedly and may not klhjlkj.");
+                WriteLine($"WARNING: {args.CacheItem.Key} was removed unexpectedly and may not be processed.");
+            }
+        }
+
+        private static void ProcessExistingFiles(string inputDirectory)
+        {
+            WriteLine($"Check {inputDirectory} for existing files");
+
+            foreach (var filePath in Directory.EnumerateFiles(inputDirectory))
+            {
+                WriteLine($"    - Found {filePath}");
+                AddToCache(filePath);
             }
         }
     }

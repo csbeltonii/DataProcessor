@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProcessor", "DataProcessor\DataProcessor.csproj", "{EAEB2672-B49B-4182-B2BF-A3A19B9E2307}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataProcessor", "DataProcessor\DataProcessor.csproj", "{EAEB2672-B49B-4182-B2BF-A3A19B9E2307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProcessor.Tests", "DataProcessor.Tests\DataProcessor.Tests.csproj", "{37E2F144-7D43-4B79-8DD2-631806FDBE27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EAEB2672-B49B-4182-B2BF-A3A19B9E2307}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAEB2672-B49B-4182-B2BF-A3A19B9E2307}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAEB2672-B49B-4182-B2BF-A3A19B9E2307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37E2F144-7D43-4B79-8DD2-631806FDBE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E2F144-7D43-4B79-8DD2-631806FDBE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E2F144-7D43-4B79-8DD2-631806FDBE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E2F144-7D43-4B79-8DD2-631806FDBE27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
